@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ----------------------------- -->
+    <!-- POP-UP -->
+    <!-- ----------------------------- -->
+    <div class="pop-up hidden">
+      <div id="overlay">
+        <div id="modal">
+          <div class="close-modal-btn">
+            <ion-icon class="icon-close-popUp" name="close-outline"></ion-icon>
+          </div>
+          <div class="modal-text">
+            Are you sure you want to delete the task?
+          </div>
+          <div class="btns">
+            <button class="btn-yes btn">yes</button>
+            <button class="btn-no btn">no</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <h1>To do list</h1>
+      <form id="form" action="/" method="get">
+        <!-- ----------------------------- -->
+        <!-- TITLE TASK INPUT -->
+        <!-- ----------------------------- -->
+        <div class="task-input">
+          <ion-icon name="star-half-outline" class="icon-title"></ion-icon>
+          <input
+            class="title-input"
+            placeholder="Add a new task"
+            id="txt"
+            type="text"
+            maxlength="40"
+            required
+          />
+          <ion-icon class="icon-add" name="add-outline"></ion-icon>
+          <ion-icon class="icon-remove hidden" name="remove-outline"></ion-icon>
+        </div>
+        <!-- ----------------------------- -->
+        <!-- DESCRIPTION TASK INPUT -->
+        <!-- ----------------------------- -->
+        <div class="description hidden">
+          <textarea
+            class="description-task"
+            placeholder="Description"
+            type="text"
+            style="resize: none"
+          ></textarea>
+          <div class="description-right">
+            <input type="date" id="myDate" class="deadline-task deadline" min="yyyy-mm-dd" >
+            <input class="btn-add" type="submit" value="add"></input>
+          </div>
+        </div>
+      </form>
+      <!-- ----------------------------- -->
+      <!-- CONTROLS -->
+      <!-- ----------------------------- -->
+      <div class="controls">
+        <span id="all">All</span>
+        <span id="Pending">Pending</span>
+        <span id="Complete">Completed</span>
+      </div>
+      <!-- ----------------------------- -->
+      <!-- ELEMENT LIST EXAMPLE -->
+      <!-- ----------------------------- -->
+      <ol class="task-box" id="toDo">
+        <!-- <li class="task delete-task">
+          <div class="summary-task" draggable="true">
+            <label>
+              <input class="checkbox" type="checkbox" />
+              <span><ion-icon
+                class="icon-bin-exp hidden"
+                name="trash-outline"
+              ></ion-icon>
+            </span>
+              <input readonly class="input-task" value='Abonamet sala1' />
+              </label
+            >
+            
+            <div class="settings">
+              <button class="btn-tasks btn-edit">Edit</button>
+              <button class="btn-task btn-save hidden">Save</button>
+
+              <span>
+                <ion-icon class="icon-menu"name="ellipsis-horizontal-outline"></ion-icon>
+                </span>
+            </div>
+          </div>
+          <div class="description-placed hidden">
+            <input value="Lorem" readonly />
+            <div class="description-last">
+              <input class="deadline"  type="date" />
+              <div class="description-icons">
+                <ion-icon class="icon-bin" name="trash-outline"></ion-icon>
+                <ion-icon class="icon-up" name="arrow-up-outline"></ion-icon>
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ol>
+
+      <button class="clear-btn">Clear All</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="Sortable.js"></script>
+    <script src="scripts.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
